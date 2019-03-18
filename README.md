@@ -27,15 +27,15 @@ The project was constructed as follows:
 
 5.  To interface with the motor control board:
 
-    a.  find the board specific sample in the SPN4 example project folders.
-    b.  copy the board support package, the BSP folder, to the Drivers folder of the FreeRTOS project.
-    c.  only copy files specific to the board you are using, in this case the STM32F401RE.
-    d.  copy any missing files from the Inc and Src folders as well.
-    e.  add any missing includes, macro definitions, or function definitions found in any of the source and header files.
-    f.  there may be other missing elements, but these will only be found when you try to build.
-    g.  once you get it to build, add code in main.c to configure the motor control board at start up.
-    h.  finally, add a task in main.c to turn the motor on and off on button press, using the main.c in SPN4 as a guide.
-    i.  you may need to use a shared global variable that is written to in the IRQ handler and read in the motor task.
+a.  find the board specific sample in the SPN4 example project folders.
+b.  copy the board support package, the BSP folder, to the Drivers folder of the FreeRTOS project.
+c.  only copy files specific to the board you are using, in this case the STM32F401RE.
+d.  copy any missing files from the Inc and Src folders as well.
+e.  add any missing includes, macro definitions, or function definitions found in any of the source and header files.
+f.  there may be other missing elements, but these will only be found when you try to build.
+g.  once you get it to build, add code in main.c to configure the motor control board at start up.
+h.  finally, add a task in main.c to turn the motor on and off on button press, using the main.c in SPN4 as a guide.
+i.  you may need to use a shared global variable that is written to in the IRQ handler and read in the motor task.
     
 6.  Once you have a working project, test it with a motor and power supply as shown below:
 
