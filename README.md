@@ -46,6 +46,21 @@ The project was constructed as follows:
     
     i.  you may need to use a shared global variable that is written to in the IRQ handler and read in the motor task.
     
-6.  Once you have a working project, test it with a motor and power supply as shown below:
+6.  Once you have a working project, test it with a motor and power supply.
 
+    a.  clone the project to you TrueSTUDIO project folder.
+    
+    b.  open TrueSTUDIO.
+    
+    c.  clean the project.
+    
+    d.  build the project.
+    
+    e.  debug as C/C++.
+    
+    f.  verify LED is flashing.
+    
+    g.  open minicom and verify UART output, 115000, 8, 1, 1.
+    
+    h.  press the blue button and verify motor turns.
     
