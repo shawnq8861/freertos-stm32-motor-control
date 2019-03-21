@@ -54,13 +54,17 @@ The project was constructed as follows:
     
     c.  clean the project.
     
-    d.  build the project.
+    d.  you may need to edit the project includes dependencies:
+        
+        project->properties->C/C++ General->Paths and Symbols->Includes->Add/Delete/Edit
     
-    e.  debug as C/C++.
+    e.  build the project.
     
-    f.  verify LED is flashing.
+    f.  debug as C/C++.
     
-    g.  open minicom and verify UART output, 115000, 8, 1, 1.
+    g.  verify LED is flashing.
     
-    h.  press the blue button and verify motor turns.
+    h.  open minicom and verify UART output, 115000, 8, 1, 1.
+    
+    i.  press the blue button and verify motor turns.
     
