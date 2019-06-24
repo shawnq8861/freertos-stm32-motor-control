@@ -46,25 +46,42 @@ The project was constructed as follows:
     
     i.  you may need to use a shared global variable that is written to in the IRQ handler and read in the motor task.
     
-6.  Once you have a working project, test it with a motor and power supply.
+6.  Alternatively, clone my project to a temporary location, and copy files into a new empty project.
 
     a.  clone the project to you TrueSTUDIO project folder.
     
-    b.  open TrueSTUDIO.
+    b.  rename by adding "temp" to the end of the directory name.
     
-    c.  clean the project.
+    c.  create a new empty project using STM32CubeMX.
     
-    d.  you may need to edit the project includes dependencies:
+        1) use FreeRTOS middleware, enable CMSIS_V1
+        2) use Timer4 for instead of systick
+    
+    d.  copy and replace files from the cloned project to the new project:
+    
+        1) Inc
+        2) Src
+        3) Drivers
+    
+    e.  edit the project includes dependencies (see the screen shot image "includes.png"):
         
-        project->properties->C/C++ General->Paths and Symbols->Includes->Add/Delete/Edit
+        project->properties->C/C++ General->Paths and Symbols->Includes->Add
+        
+        add path to Drivers->BSP, Drivers->CMSIS, Drivers->STM32HAL... as needed, the build errors will indicate the 
+        header files that the compiler cannot find, just locate where the files are in the project folder and add
+        the appropriate path to the includes.
     
     e.  build the project.
     
-    f.  debug as C/C++.
+7.  once you have a project that builds fro either method above:
     
-    g.  verify LED is flashing.
+    a.  debug as C/C++.
     
-    h.  open minicom and verify UART output, 115000, 8, 1, 1.
+    b.  verify LED is flashing.
     
-    i.  press the blue button and verify motor turns.
+    c.  open minicom and verify UART output, 115000, 8, 1, 1.
+    
+    d.  press the blue button and verify motor turns.
+    
+    e.  verify text output to the minicom terminal.
     
