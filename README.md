@@ -1,5 +1,7 @@
 ﻿# freertos_stm32_motor_control
  
+Superceded by qbot_freertos
+ 
 FreeRTOS implementation, developed in Atollic TrueSTUDIO, that controls a DC motor.
 
 Runs on STM32 Nucleo64 F401RE board.
